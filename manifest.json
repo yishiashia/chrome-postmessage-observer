@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "postMessageObserver",
+  "version": "1.0.0",
+  "description": "A Chrome extension that allows you to observe the flow of postMessage messages on the side panel.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": "icon48.png",
+    "default_title": "Click to open panel"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "sidePanel"
+  ],
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

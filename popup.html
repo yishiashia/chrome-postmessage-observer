@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>postMessage Observer</title>
+    <script src="popup.js"></script>
+    <style>
+      body {
+        background-color: #202124;
+        color: #ffffff;
+      }
+
+      #messages {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #messages .message {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        max-width: 100%;
+        overflow: hidden;
+        align-items: start;
+      }
+
+      #messages .message .msg-flow {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      #messages .time-span {
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      #messages .arrow {
+        font-size: 16pt;
+        margin-left: 8px;
+        margin-right: 8px;
+        line-height: 12px;
+      }
+
+      #messages .msg-content {
+        padding: 20px;
+        max-width: 100%;
+        word-wrap: break-word;
+        color: #eee;
+      }
+
+      span.bold {
+        font-weight: bold;
+      }
+
+      hr {
+        width: 98%;
+      }
+
+      hr.dashed {
+        border-top: 1px dashed #666;
+        opacity: 0.1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>postMessage Observer</h2>
+    <br />
+    <div id="messages"></div>
+  </body>
+</html>
